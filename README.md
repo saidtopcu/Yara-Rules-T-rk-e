@@ -1,85 +1,87 @@
 [![Build Status](https://travis-ci.org/Yara-Rules/rules.svg?branch=master)](https://travis-ci.org/Yara-Rules/rules) <img src="http://img.shields.io/liberapay/patrons/yararules.svg?logo=liberapay">
 
 
-# Project
+# Proje
 
-This project covers the need of a group of IT Security Researchers to have a single repository where different Yara signatures are compiled, classified and kept as up to date as possible, and began as an open source community for collecting Yara rules. Our Yara ruleset is under the GNU-GPLv2 license and open to any user or organization, as long as you use it under this license.
+Bu proje, bir grup BT Güvenliği Araştırmacısının, farklı Yara imzalarının derlendiği, sınıflandırıldığı ve mümkün olduğunca güncel tutulduğu tek bir depoya sahip olma ihtiyacını kapsar ve Yara kurallarını toplamak için açık kaynaklı bir topluluk olarak başlar. Yara kural setimiz GNU-GPLv2 lisansı altındadır ve bu lisans altında kullandığınız sürece herhangi bir kullanıcıya veya kuruluşa açıktır.
 
-Yara is becoming increasingly used, but knowledge about the tool and its usage is dispersed across many different places. The Yara Rules project aims to be the meeting point for Yara users by gathering together a ruleset as complete as possible thusly providing users a quick way to get Yara ready for usage.
+Yara giderek daha fazla kullanılıyor, ancak alet ve kullanımı hakkındaki bilgiler birçok farklı yere dağılmış durumda. Yara Kuralları projesi, mümkün olduğunca eksiksiz bir kural kümesini bir araya getirerek Yara kullanıcıları için buluşma noktası olmayı ve böylece kullanıcılara Yara'yı kullanıma hazır hale getirmenin hızlı bir yolunu sunmayı amaçlamaktadır.
 
-We hope this project is useful for the Security Community and all Yara Users, and are looking forward to your feedback. Join this community by subscribing to our mailing list.
+Bu projenin Güvenlik Topluluğu ve tüm Yara Kullanıcıları için yararlı olacağını umuyoruz ve geri bildirimlerinizi bekliyoruz. E-posta listemize abone olarak bu topluluğa katılın.
 
-# Contribute
+# Katkı
 
-If you’re interested in sharing your Yara rules with us and the Security Community, you can join our mailing list, send a message to our Twitter account or send a pull request here.
+Yara kurallarınızı bizimle ve Güvenlik Topluluğuyla paylaşmak istiyorsanız, posta listemize katılabilir, Twitter hesabımıza mesaj gönderebilir veya buradan çekme isteği gönderebilirsiniz.
 
-Twitter account: https://twitter.com/yararules
+Twitter hesabı: https://twitter.com/yararules
 
-# Requirements
+# Gereklilikler
 
-Yara **version 3.0** or higher is required for most of our rules to work. This is mainly due to the use of the "pe" module introduced in that version.
+Kurallarımızın çoğunun çalışması için Yara ** sürüm 3.0 ** veya üstü gereklidir. Bu, esas olarak bu sürümde tanıtılan "pe" modülünün kullanılmasından kaynaklanmaktadır.
 
-You can check your installed version with `yara -v`
+Yüklü sürümünüzü 'yara -v' ile kontrol edebilirsiniz
 
-Packages available in Ubuntu 14.04 LTS default repositories are too old.  You can alternatively install from source or use the packages available in the [Remnux repository](https://launchpad.net/~remnux/+archive/ubuntu/stable).
+Ubuntu 14.04 LTS varsayılan depolarında bulunan paketler çok eski.  Alternatif olarak kaynaktan yükleyebilir veya [Remnux deposunda](https://launchpad.net/~remnux/+archive/ubuntu/stable) bulunan paketleri kullanabilirsiniz.
 
-~~Also, you will need [Androguard Module](https://github.com/Koodous/androguard-yara) if you want to use the rules in the 'mobile_malware' category.~~
+~~Ayrıca, 'https://github.com/Koodous/androguard' kategorisindeki kuralları kullanmak istiyorsanız [Androguard Modülü] (mobile_malware-yara) ihtiyacınız olacak.~~
 
-We have deprecated mobile_malware rules that depend on Androguard Module because it seems an abandoned project.
+Androguard Modülüne bağlı mobile_malware kurallarını kullanımdan kaldırdık çünkü terk edilmiş bir proje gibi görünüyor.
 
-# Categories
+# Kategoriler
 
 ## Anti-debug/Anti-VM
 
-In this section you will find Yara Rules aimed toward the detection of anti-debug and anti-virtualization techniques used by malware to evade automated analysis.
+Bu bölümde, kötü amaçlı yazılımlar tarafından otomatik analizden kaçınmak için kullanılan hata ayıklama önleme ve sanallaştırma önleme tekniklerinin tespitine yönelik Yara Kurallarını bulacaksınız.
 
 ## Capabilities
 
-In this section you will find Yara rules to detect capabilities that do not fit into any of the other categories.  They are useful to know for analysis but may not be malicious indicators on their own.
+Bu bölümde, diğer kategorilerin hiçbirine uymayan yetenekleri tespit etmek için Yara kurallarını bulacaksınız.  Analiz için bilinmesi yararlıdır, ancak kendi başlarına kötü amaçlı göstergeler olmayabilirler.
 
-## CVE Rules
+## CVE Kuralları
 
-In this section you will find Yara Rules specialised toward the identification of specific Common Vulnerabilities and Exposures (CVEs)
+Bu bölümde, belirli Ortak Güvenlik Açıklarının ve Etkilenmelerin (CVE'ler) tanımlanmasına yönelik Yara Kurallarını bulacaksınız.
 
 ## Crypto
 
-In this section you will find Yara rules aimed toward the detection and existence of cryptographic algorithms.
+Bu bölümde, kriptografik algoritmaların tespitine ve varlığına yönelik Yara kurallarını bulacaksınız.
 
-## Exploit Kits
+## Exploit Kitleri
 
 In this section you will find Yara rules aimed toward the detection and existence of Exploit Kits.
 
-## Malicious Documents
+## Zararlı Dökümanlar
 
-In this section you will find Yara Rules to be used with documents to find if they have been crafted to leverage malicious code.
+Bu bölümde, Exploit Kitlerinin tespitine ve varlığına yönelik Yara kurallarını bulacaksınız.
 
-## Malware
+## Zararlı Yazılımlar
 
-In this section you will find Yara rules specialised toward the identification of well-known malware.
+Bu bölümde, iyi bilinen kötü amaçlı yazılımların tanımlanmasına yönelik Yara kurallarını bulacaksınız.
 
-## Packers
+## Paketleyiciler
 
-In this section you will find Yara Rules aimed to detect well-known software packers, that can be used by malware to hide itself.
+Bu bölümde, kötü amaçlı yazılımlar tarafından kendini gizlemek için kullanılabilecek iyi bilinen yazılım paketleyicilerini tespit etmeyi amaçlayan Yara Kurallarını bulacaksınız.
 
 ## WebShells
 
-In this section you will find Yara rules specialised toward the identification of well-known webshells.
+Bu bölümde, iyi bilinen web kabuklarının tanımlanmasına yönelik uzmanlaşmış Yara kurallarını bulacaksınız.
 
 ## Email
 
-In this section you will find Yara rules specialised toward the identification of malicious e-mails.
+Bu bölümde, kötü amaçlı e-postaların tanımlanmasına yönelik Yara kurallarını bulacaksınız.
 
-## Malware Mobile
+## Mobil Malware'lar
 
-In this section you will find Yara rules specialised toward the identification of well-known mobile malware.
+Bu bölümde, iyi bilinen mobil kötü amaçlı yazılımların tanımlanmasına yönelik Yara kurallarını bulacaksınız.
 
 ## Deprecated
 
-In this section you will find Yara rules deprecated.
+Bu bölümde Yara kurallarının kullanımdan kaldırıldığını göreceksiniz.
 
-# Contact
+# İletişim
 
 Webpage: https://yara-rules.github.io/blog/
 
 Twitter account: https://twitter.com/yararules
+
+Yazının Orijinali: https://github.com/Yara-Rules/rules
 
